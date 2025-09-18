@@ -149,8 +149,9 @@ export default function HomeScreen() {
               <Brain size={24} color="#8b5cf6" strokeWidth={2} />
             </View>
             
-            {focusLevels.map((level, index) => (
+            {focusLevels.map((level, index) => {
               const isUnlocked = level.level === 1 || currentFocusLevel >= level.level;
+              return (
               <TouchableOpacity
                 key={level.id}
                 style={[
@@ -192,7 +193,8 @@ export default function HomeScreen() {
                   </View>
                 </LinearGradient>
               </TouchableOpacity>
-            ))}
+              );
+            })}
           </View>
 
           {/* Today's Insights */}
