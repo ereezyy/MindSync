@@ -12,7 +12,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { Play, Brain, Zap, Star, TrendingUp } from 'lucide-react-native';
 import { router } from 'expo-router';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import UserDataService from '@/services/UserDataService';
 
 const { width, height } = Dimensions.get('window');
 
@@ -41,11 +41,11 @@ const focusLevels: FocusLevel[] = [
   {
     id: '3',
     level: 3,
-    title: 'Mind Awake, Body Asleep',
-    description: 'Deep physical relaxation with mental clarity',
-    frequency: '8-14 Hz',
+    title: 'Alpha Synchronization',
+    description: 'Enhanced relaxation with maintained awareness',
+    frequency: '10 Hz',
     brainwave: 'Alpha',
-    unlocked: true,
+    unlocked: currentFocusLevel >= 3,
     sessions: 8,
   },
   {
@@ -55,7 +55,7 @@ const focusLevels: FocusLevel[] = [
     description: 'Enhanced awareness beyond physical limitations',
     frequency: '8-10 Hz',
     brainwave: 'Alpha/Theta',
-    unlocked: false,
+    unlocked: currentFocusLevel >= 10,
     sessions: 6,
   },
   {
@@ -65,7 +65,7 @@ const focusLevels: FocusLevel[] = [
     description: 'Access to non-physical dimensions of consciousness',
     frequency: '4-8 Hz',
     brainwave: 'Theta',
-    unlocked: false,
+    unlocked: currentFocusLevel >= 12,
     sessions: 4,
   },
 ];
@@ -74,6 +74,7 @@ export default function HomeScreen() {
   const [userName, setUserName] = useState('Explorer');
   const [todaysSessions, setTodaysSessions] = useState(0);
   const [totalHours, setTotalHours] = useState(0);
+  const [currentFocusLevel, setCurrentFocusLevel] = useState(1);
 
   useEffect(() => {
     loadUserData();
@@ -81,13 +82,16 @@ export default function HomeScreen() {
 
   const loadUserData = async () => {
     try {
-      const name = await AsyncStorage.getItem('userName');
-      const sessions = await AsyncStorage.getItem('todaysSessions');
-      const hours = await AsyncStorage.getItem('totalHours');
+      const userProfile = await UserDataService.getUserProfile();
+      const dailyStats = await UserDataService.getDailyStats();
       
-      if (name) setUserName(name);
-      if (sessions) setTodaysSessions(parseInt(sessions));
-      if (hours) setTotalHours(parseFloat(hours));
+      if (userProfile) {
+        setUserName(userProfile.name);
+        setTotalHours(userProfile.totalHours);
+        setCurrentFocusLevel(userProfile.currentFocusLevel);
+      }
+      
+      setTodaysSessions(dailyStats.sessions);
     } catch (error) {
       console.log('Error loading user data:', error);
     }
