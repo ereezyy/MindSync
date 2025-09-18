@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -71,9 +71,15 @@ export default function HomeScreen() {
   const [todaysSessions, setTodaysSessions] = useState(0);
   const [totalHours, setTotalHours] = useState(0);
   const [currentFocusLevel, setCurrentFocusLevel] = useState(1);
+  const isMountedRef = useRef(true);
 
   useEffect(() => {
+    isMountedRef.current = true;
     loadUserData();
+    
+    return () => {
+      isMountedRef.current = false;
+    };
   }, []);
 
   const loadUserData = async () => {
@@ -81,13 +87,15 @@ export default function HomeScreen() {
       const userProfile = await UserDataService.getUserProfile();
       const dailyStats = await UserDataService.getDailyStats();
       
-      if (userProfile) {
+      if (userProfile && isMountedRef.current) {
         setUserName(userProfile.name);
         setTotalHours(userProfile.totalHours);
         setCurrentFocusLevel(userProfile.currentFocusLevel);
       }
       
-      setTodaysSessions(dailyStats.sessions);
+      if (isMountedRef.current) {
+        setTodaysSessions(dailyStats.sessions);
+      }
     } catch (error) {
       console.log('Error loading user data:', error);
     }
