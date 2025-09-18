@@ -23,7 +23,7 @@ interface FocusLevel {
   description: string;
   frequency: string;
   brainwave: string;
-  unlocked: boolean;
+  unlocked?: boolean;
   sessions: number;
 }
 
@@ -35,7 +35,6 @@ const focusLevels: FocusLevel[] = [
     description: 'Baseline consciousness with enhanced awareness',
     frequency: '14-30 Hz',
     brainwave: 'Beta',
-    unlocked: true,
     sessions: 12,
   },
   {
@@ -45,7 +44,6 @@ const focusLevels: FocusLevel[] = [
     description: 'Enhanced relaxation with maintained awareness',
     frequency: '10 Hz',
     brainwave: 'Alpha',
-    unlocked: currentFocusLevel >= 3,
     sessions: 8,
   },
   {
@@ -55,7 +53,6 @@ const focusLevels: FocusLevel[] = [
     description: 'Enhanced awareness beyond physical limitations',
     frequency: '8-10 Hz',
     brainwave: 'Alpha/Theta',
-    unlocked: currentFocusLevel >= 10,
     sessions: 6,
   },
   {
@@ -65,7 +62,6 @@ const focusLevels: FocusLevel[] = [
     description: 'Access to non-physical dimensions of consciousness',
     frequency: '4-8 Hz',
     brainwave: 'Theta',
-    unlocked: currentFocusLevel >= 12,
     sessions: 4,
   },
 ];
@@ -154,17 +150,18 @@ export default function HomeScreen() {
             </View>
             
             {focusLevels.map((level, index) => (
+              const isUnlocked = level.level === 1 || currentFocusLevel >= level.level;
               <TouchableOpacity
                 key={level.id}
                 style={[
                   styles.levelCard,
-                  !level.unlocked && styles.lockedCard
+                  !isUnlocked && styles.lockedCard
                 ]}
-                disabled={!level.unlocked}
+                disabled={!isUnlocked}
                 onPress={() => router.push(`/session/${level.id}`)}
               >
                 <LinearGradient
-                  colors={level.unlocked ? ['#1e293b', '#334155'] : ['#0f172a', '#1e293b']}
+                  colors={isUnlocked ? ['#1e293b', '#334155'] : ['#0f172a', '#1e293b']}
                   style={styles.levelGradient}
                 >
                   <View style={styles.levelHeader}>
@@ -173,7 +170,7 @@ export default function HomeScreen() {
                       <Text style={styles.levelTitle}>{level.title}</Text>
                     </View>
                     <View style={styles.levelMeta}>
-                      {level.unlocked ? (
+                      {isUnlocked ? (
                         <Star size={20} color="#fbbf24" fill="#fbbf24" />
                       ) : (
                         <View style={styles.lockedIndicator}>
