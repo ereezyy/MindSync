@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
-import { CheckCircle, Star, BookOpen, Home, RotateCcw, Award } from 'lucide-react-native';
+import { CircleCheck as CheckCircle, Star, BookOpen, Chrome as Home, RotateCcw, Award } from 'lucide-react-native';
 
 const { width } = Dimensions.get('window');
 
