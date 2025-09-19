@@ -1,0 +1,102 @@
+{
+  "common": {
+    "ok": "Aceptar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "done": "Hecho",
+    "loading": "Cargando...",
+    "error": "Error",
+    "retry": "Reintentar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "yes": "Sí",
+    "no": "No",
+    "continue": "Continuar"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "sessions": "Sesiones",
+    "progress": "Progreso",
+    "profile": "Perfil"
+  },
+  "home": {
+    "welcome": "Bienvenido de nuevo,",
+    "todayStats": "Hoy",
+    "totalHours": "Total",
+    "quickSession": {
+      "title": "Comienza tu Viaje",
+      "button": "Sesión Rápida",
+      "subtitle": "Comienza con ondas binaurales personalizadas"
+    },
+    "focusLevels": {
+      "title": "Niveles de Enfoque Gateway",
+      "sessions_one": "{{count}} sesión",
+      "sessions_other": "{{count}} sesiones"
+    },
+    "insights": {
+      "title": "Perspectivas de Hoy",
+      "optimalTime": {
+        "title": "Hora Óptima de Sesión",
+        "description": "Tu respuesta binaural es más fuerte entre {{startTime}}-{{endTime}} según tu historial de sesiones."
+      },
+      "progress": {
+        "title": "Actualización de Progreso",
+        "description": "Estás listo para desbloquear Enfoque {{level}}. Completa {{remaining}} sesiones más de Enfoque {{currentLevel}}."
+      }
+    }
+  },
+  "sessions": {
+    "title": "Sesiones Binaurales",
+    "subtitle": "Frecuencias calibradas con precisión para la exploración de la conciencia",
+    "categories": {
+      "all": "Todas",
+      "focus": "Enfoque",
+      "relaxation": "Relajación",
+      "creativity": "Creatividad",
+      "sleep": "Sueño"
+    },
+    "details": {
+      "duration": "{{minutes}} min",
+      "frequency": "{{hz}} Hz",
+      "customize": "Personalizar",
+      "play": "Reproducir",
+      "popularity": "{{percent}}% ★"
+    }
+  },
+  "sessionComplete": {
+    "title": "¡Sesión Completada!",
+    "subtitle": "Has completado exitosamente tu sesión del Proceso Gateway",
+    "summary": {
+      "title": "Resumen de Sesión",
+      "focusLevel": "Nivel de Enfoque",
+      "duration": "Duración",
+      "frequency": "Frecuencia",
+      "brainwave": "Onda Cerebral"
+    },
+    "rating": {
+      "title": "¿Cómo fue tu sesión?",
+      "subtitle": "Tus comentarios nos ayudan a personalizar tu experiencia"
+    },
+    "actions": {
+      "saveAndContinue": "Guardar y Continuar",
+      "repeatSession": "Repetir Sesión",
+      "returnHome": "Volver al Inicio"
+    }
+  },
+  "meditation": {
+    "focusLevels": {
+      "1": {
+        "title": "Estado de Vigilia Normal",
+        "description": "Conciencia base con mayor percepción"
+      },
+      "3": {
+        "title": "Mente Despierta, Cuerpo Dormido",
+        "description": "Experimenta el estado de Enfoque 3 del Proceso Gateway donde la conciencia física se relaja mientras la conciencia mental permanece aguda y alerta."
+      }
+    }
+  }
+}

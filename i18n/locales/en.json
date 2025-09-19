@@ -1,0 +1,290 @@
+{
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "done": "Done",
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "yes": "Yes",
+    "no": "No",
+    "continue": "Continue"
+  },
+  "navigation": {
+    "home": "Home",
+    "sessions": "Sessions",
+    "progress": "Progress",
+    "profile": "Profile"
+  },
+  "home": {
+    "welcome": "Welcome back,",
+    "todayStats": "Today",
+    "totalHours": "Total",
+    "quickSession": {
+      "title": "Begin Your Journey",
+      "button": "Quick Session",
+      "subtitle": "Start with personalized binaural beats"
+    },
+    "focusLevels": {
+      "title": "Gateway Focus Levels",
+      "sessions_one": "{{count}} session",
+      "sessions_other": "{{count}} sessions"
+    },
+    "insights": {
+      "title": "Today's Insights",
+      "optimalTime": {
+        "title": "Optimal Session Time",
+        "description": "Your binaural response is strongest between {{startTime}}-{{endTime}} based on your session history."
+      },
+      "progress": {
+        "title": "Progress Update",
+        "description": "You're ready to unlock Focus {{level}}. Complete {{remaining}} more Focus {{currentLevel}} sessions."
+      }
+    }
+  },
+  "sessions": {
+    "title": "Binaural Sessions",
+    "subtitle": "Precisely calibrated frequencies for consciousness exploration",
+    "categories": {
+      "all": "All",
+      "focus": "Focus",
+      "relaxation": "Relaxation", 
+      "creativity": "Creativity",
+      "sleep": "Sleep"
+    },
+    "details": {
+      "duration": "{{minutes}} min",
+      "frequency": "{{hz}} Hz",
+      "customize": "Customize",
+      "play": "Play",
+      "popularity": "{{percent}}% ★"
+    }
+  },
+  "sessionDetail": {
+    "title": "Session Details",
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate", 
+      "advanced": "Advanced"
+    },
+    "specs": {
+      "duration": "Duration",
+      "frequency": "Frequency",
+      "brainwave": "Brainwave"
+    },
+    "benefits": {
+      "title": "What You'll Experience",
+      "hemisphericSync": "Enhanced hemispheric synchronization",
+      "deepenedAwareness": "Deepened meditative awareness",
+      "expandedConsciousness": "Expanded consciousness exploration",
+      "nonOrdinaryStates": "Access to non-ordinary states"
+    },
+    "beginSession": "Begin Session"
+  },
+  "sessionPlayer": {
+    "focusLevel": "Focus Level {{level}}",
+    "controls": {
+      "play": "Play",
+      "pause": "Pause",
+      "stop": "Stop",
+      "mute": "Mute",
+      "unmute": "Unmute"
+    },
+    "details": {
+      "frequency": "Frequency",
+      "brainwave": "Brainwave",
+      "volume": "Volume"
+    }
+  },
+  "sessionComplete": {
+    "title": "Session Complete!",
+    "subtitle": "You've successfully completed your Gateway Process session",
+    "summary": {
+      "title": "Session Summary",
+      "focusLevel": "Focus Level",
+      "duration": "Duration",
+      "frequency": "Frequency",
+      "brainwave": "Brainwave"
+    },
+    "achievement": {
+      "title": "New Achievement!",
+      "description": "{{title}} - {{description}}"
+    },
+    "rating": {
+      "title": "How was your session?",
+      "subtitle": "Your feedback helps us personalize your experience"
+    },
+    "notes": {
+      "title": "Session Notes",
+      "subtitle": "Record your experience, insights, or observations",
+      "placeholder": "What did you experience during this session?"
+    },
+    "insight": {
+      "title": "Next Step in Your Journey",
+      "description": "You're making excellent progress! Consider trying Focus {{nextLevel}} sessions to explore deeper states of consciousness and expanded awareness."
+    },
+    "actions": {
+      "saveAndContinue": "Save & Continue",
+      "repeatSession": "Repeat Session",
+      "returnHome": "Return Home"
+    }
+  },
+  "progress": {
+    "title": "Your Progress",
+    "subtitle": "Track your consciousness exploration journey",
+    "overview": "Overview",
+    "stats": {
+      "focusLevels": "Focus Levels",
+      "hoursMediated": "Hours Meditated", 
+      "sessionsCompleted": "Sessions Completed",
+      "streakDays": "Streak Days"
+    },
+    "weeklyActivity": "Weekly Activity",
+    "achievements": {
+      "title": "Achievements",
+      "earned": "Earned on {{date}}"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "journey": "Your Journey",
+    "stats": {
+      "currentLevel": "Current Level",
+      "totalSessions": "Total Sessions", 
+      "hoursMediated": "Hours Meditated",
+      "streak": "Streak"
+    },
+    "settings": {
+      "title": "Settings",
+      "sessionReminders": {
+        "title": "Session Reminders",
+        "description": "Get reminded to maintain your practice"
+      },
+      "backgroundAudio": {
+        "title": "Background Audio",
+        "description": "Continue sessions when app is minimized"
+      },
+      "biometricSync": {
+        "title": "Biometric Integration", 
+        "description": "Connect EEG and wearable devices"
+      },
+      "audioSettings": {
+        "title": "Audio Settings",
+        "description": "Customize frequency ranges and volumes"
+      },
+      "privacy": {
+        "title": "Privacy & Data",
+        "description": "Manage your personal information"
+      },
+      "help": {
+        "title": "Help & Support",
+        "description": "FAQs and customer support"
+      },
+      "language": {
+        "title": "Language",
+        "description": "Change app language"
+      }
+    },
+    "gateway": {
+      "title": "About Gateway Process",
+      "scientificFoundation": {
+        "title": "Scientific Foundation",
+        "description": "MindSync is based on the declassified CIA Gateway Process, utilizing precise binaural beat frequencies to achieve hemispheric synchronization and expanded states of consciousness."
+      },
+      "learnMore": "Learn More"
+    },
+    "version": "MindSync v{{version}}",
+    "versionSubtext": "Gateway Process Implementation"
+  },
+  "quickSession": {
+    "title": "Quick Session",
+    "subtitle": "Choose a session perfectly tailored to your current level",
+    "options": {
+      "currentLevel": {
+        "title": "Focus {{level}} Session",
+        "description": "Continue your journey at your current level"
+      },
+      "quickFocus": {
+        "title": "Quick Focus Boost", 
+        "description": "Short 10-minute session for mental clarity"
+      },
+      "stressRelief": {
+        "title": "Stress Relief",
+        "description": "Calming 15-minute alpha wave session"
+      },
+      "deepMeditation": {
+        "title": "Deep Meditation",
+        "description": "Advanced 25-minute theta exploration"
+      }
+    },
+    "browseAll": "Browse All Sessions"
+  },
+  "achievements": {
+    "gatewayExplorer": {
+      "title": "Gateway Explorer",
+      "description": "Completed your first binaural session"
+    },
+    "alphaMaster": {
+      "title": "Alpha Master", 
+      "description": "Achieved consistent Alpha state synchronization"
+    },
+    "thetaPioneer": {
+      "title": "Theta Pioneer",
+      "description": "Successfully accessed Theta consciousness state"
+    },
+    "consistentPractice": {
+      "title": "Consistent Practice",
+      "description": "{{days}} consecutive days of meditation"
+    },
+    "deepExplorer": {
+      "title": "Deep Explorer",
+      "description": "Reached Focus Level {{level}}"
+    },
+    "dedicatedPractitioner": {
+      "title": "Dedicated Practitioner",
+      "description": "Meditated for {{hours}}+ hours total"
+    }
+  },
+  "errors": {
+    "general": "Something went wrong. Please try again.",
+    "network": "Network error. Please check your connection.",
+    "audioEngine": "Audio system error. Please restart the app.",
+    "sessionStart": "Failed to start session. Please try again.",
+    "dataLoad": "Failed to load data. Please refresh.",
+    "saveData": "Failed to save data. Please try again."
+  },
+  "meditation": {
+    "frequencies": {
+      "delta": "Delta (0.5-4 Hz) - Deep sleep, healing",
+      "theta": "Theta (4-8 Hz) - Deep meditation, creativity", 
+      "alpha": "Alpha (8-14 Hz) - Relaxed awareness",
+      "beta": "Beta (14-30 Hz) - Normal waking consciousness",
+      "gamma": "Gamma (30-100 Hz) - High-level cognitive function"
+    },
+    "focusLevels": {
+      "1": {
+        "title": "Normal Waking",
+        "description": "Baseline consciousness with enhanced awareness"
+      },
+      "3": {
+        "title": "Mind Awake, Body Asleep", 
+        "description": "Experience the Gateway Process Focus 3 state where physical consciousness relaxes while mental awareness remains sharp and alert."
+      },
+      "10": {
+        "title": "Mind Alert, Body Asleep",
+        "description": "Access Focus 10 - the state of heightened awareness beyond normal physical limitations."
+      },
+      "12": {
+        "title": "Expanded Awareness",
+        "description": "Journey to Focus 12 - a state of expanded awareness where consciousness transcends ordinary limits."
+      }
+    }
+  }
+}
